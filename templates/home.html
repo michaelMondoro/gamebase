@@ -1,0 +1,38 @@
+<!-- Extend Base Page -->
+{% extends 'base.html' %}
+
+{% block title %}Gamebase{% endblock %}
+
+
+<!-- Custom Page Header -->
+{% block header_items %} 
+<div class="centered_cell"></div>
+<div class="centered_cell"><h2>{% block header %}Home{% endblock %}</h2></div>
+<div class="centered_cell"><p class="button refresh">Refresh Now</p></div>
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %} 
+<div class="centered_cell" style="margin: 2em 0 2em 0;"><p class="button picks">$ YOUR PICKS</p></div>
+<div class="content">
+    {% for game in games %}
+    <div class="game">
+        <div class="team"><p class="team1">{{game["team1"]}}</p><p class="score">{{game["score1"]}}</p></div>
+        <div class="team"><p class="team2">{{game["team2"]}}</p><p class="score">{{game["score2"]}}</p></div>
+        <div class="odds" style="background: linear-gradient(90deg, black {{game['odds1']}}%, blue 10%);">
+            <p>{{game["odds1"]}}</p>
+            <p>{{game["odds2"]}}</p>
+        </div>
+        <div class="buy">
+            <p class="buy1 button">+ BUY @ {{game["odds1"]}}</p>
+            <p class="buy2 button">+ BUY @ {{game["odds2"]}}</p>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock %}
