@@ -13,7 +13,7 @@
 
 <!-- Page Content -->
 {% block content %} 
-<div class="centered_cell" style="margin: 2em 0 2em 0;"><p class="button picks">$ YOUR PICKS</p></div>
+<div class="centered_cell" style="margin: 2em 0 2em 0;"><p id="picks" class="button picks"><a href="{{url_for('picks')}}" >$ YOUR PICKS</a></p></div>
 <div class="content">
     {% for game in games %}
     <div class="game">

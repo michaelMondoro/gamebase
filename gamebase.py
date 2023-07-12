@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, url_for
 
 app = Flask(__name__)
 app.config['DEV'] = True
@@ -41,6 +41,11 @@ def howto():
 @app.route('/your_picks')
 def picks():
     return render_template('picks.html')
+
+# Load Browser Favorite Icon
+@app.route('/favicon.ico')
+def favicon():
+    return url_for('static', filename='favicon.ico')
 
 if __name__ == "__main__":
     app.run(debug=app.config['DEV'])

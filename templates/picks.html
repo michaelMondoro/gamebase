@@ -3,10 +3,17 @@
 
 {% block title %}Your Picks{% endblock %}
 
+<!-- Custom Page Header -->
+{% block header_items %} 
+<div class="centered_cell"></div>
+<div class="centered_cell"><h2>{% block header %}Your Picks{% endblock %}</h2></div>
+<div class="centered_cell"></div>
+{% endblock %}
 
 <!-- Page Content -->
 {% block content %} 
-
+<div class="centered_cell" style="margin: 2em 0 2em 0;"><h2 style="font-size: 3em;">Your Picks</h2></div>
+<div class="centered_cell" style="margin: 2em 0 2em 0;"><p class="button blue_button"><a href="{{url_for('howto')}}" >HOW TO PLAY?</a></p></div>
 
 
 

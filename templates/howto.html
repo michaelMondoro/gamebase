@@ -3,10 +3,97 @@
 
 {% block title %}How To Play{% endblock %}
 
+<!-- Custom Page Header -->
+{% block header_items %} 
+<div class="centered_cell"></div>
+<div class="centered_cell"><h2>{% block header %}How To Play{% endblock %}</h2></div>
+<div class="centered_cell"></div>
+{% endblock %}
+
+
 
 <!-- Page Content -->
 {% block content %} 
+<div class="content">
+    <div class="section">
+        <p class="desc">Before/During Game Action</p>
+        <p class="desc">Selecting a Team</p>
+        <div class="game">
+            <p class="example_title">MLB Example</p>
+            <div class="team"><p class="team1">New York Yankees</p><p class="score">2</p></div>
+            <div class="team"><p class="team2">Boston Red Socks</p><p class="score">1</p></div>
+            <div class="odds" style="background: linear-gradient(90deg, black 60%, blue 10%);">
+                <p>60</p>
+                <p>40</p>
+            </div>
+            <div class="buy">
+                <p class="buy1 button">+ BUY @ 60</p>
+                <p class="buy2 button">+ BUY @ 40</p>
+            </div>
+        </div>
+        <p class="desc">Before and during games, select which team you think will win by "buying" them with your coins</p>
+    </div>
 
+    <div class="section">
+        <p class="desc">Before/During Game Action</p>
+        <p class="desc">Cashing Out</p>
+        <p class="desc"><b>ex. Yankees score 3 runs!</b></p>
+
+        <p class="arrow">&darr;</p>
+
+        <div class="game">
+            <p class="example_title">MLB Example</p>
+            <div class="team"><p class="team1">New York Yankees</p><p class="score">5</p></div>
+            <div class="team"><p class="team2">Boston Red Socks</p><p class="score">1</p></div>
+            <div class="odds" style="background: linear-gradient(90deg, black 80%, blue 10%);">
+                <p>80</p>
+                <p>20</p>
+            </div>
+            <div class="buy">
+                <p class="buy1 button">+ BUY @ 80</p>
+                <p class="buy2 button">+ BUY @ 20</p>
+            </div>
+        </div>
+        
+        <p class="arrow">&darr;</p>
+
+        <p class="desc"><b>Click on "YOUR PICKS"</b></p>
+        <div class="centered_cell" style="margin: 2em 0 2em 0;"><p id="picks" class="button picks">$ YOUR PICKS</p></div>
+        
+        <div class="blue_box">
+            <p>New York Yankees</p>
+            <p>- Risking 60 to win 40</p>
+            <p>- Single share price: 60</p>
+            <p class="red_button button">(20) @ 80 - SELL FOR 80</p>
+        </div>
+        <p class="arrow">&darr;</p>
+
+        <p class="desc"><b>Sell your pick at 80, profiting 20 coins (80 minus 60)</b></p>
+        <p class="desc">In real time, the team's price will fluctuate depending on the momentum of the game. At any time, you can sell your pick at the current price - securing a profit (or reduced loss)</p>
+
+    </div>
+
+    <div class="section">
+        <p class="desc">End of Game Action</p>
+        <p class="desc">Redeeming Winning Picks</p>
+        <p class="desc"><b>Yankees win!</b></p>
+
+        <p class="arrow">&darr;</p>
+
+        <div class="centered_cell" style="margin: 2em 0 2em 0;"><p id="picks" class="button picks">$ YOUR PICKS</p></div>
+        
+        <div class="blue_box">
+            <p>New York Yankees</p>
+            <p>- Risking 60 to win 40</p>
+            <p>- Single share price: 60</p>
+        </div>
+        <p class="desc"><b>Redeem for 100, profiting 40 coins</b></p>
+
+
+        <p class="desc">* If the team wins, redeem your pick for 100 coins, earning you a profit!</p>
+        <p class="desc">* If they lose, you get nothing.</p>
+    </div>
+</div>
 
 
 
