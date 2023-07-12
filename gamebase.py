@@ -45,7 +45,7 @@ def picks():
 # Load Browser Favorite Icon
 @app.route('/favicon.ico')
 def favicon():
-    return url_for('static', filename='favicon.ico')
+    return url_for('static', filename='icon.jpeg')
 
 if __name__ == "__main__":
     app.run(debug=app.config['DEV'])

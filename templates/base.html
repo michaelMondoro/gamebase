@@ -8,6 +8,7 @@
 <body>
     <header>
         <div class="header_grid">
+            <div class="centered_cell"><a href="{{url_for('home')}}"><img src="{{url_for('static',filename='icon.jpeg')}}"></a></div>
             {% block header_items %} {% endblock %}
         </div>
     </header>
