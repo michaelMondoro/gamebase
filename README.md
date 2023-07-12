@@ -13,3 +13,5 @@ python gamebase.py
 # This command will run the application on your computer
 # You can access it by navigating to 'localhost:5000' in your browser
 ```
+
+![Screen Shot 2023-07-12 at 10 36 45 AM](https://github.com/michaelMondoro/gamebase/assets/38412172/6cbded0d-6c10-46f3-84b5-e5a1df62cc6c)
