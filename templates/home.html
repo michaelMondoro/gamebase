@@ -7,7 +7,7 @@
 <!-- Custom Page Header -->
 {% block header_items %}
 <div class="centered_cell"><h2>{% block header %}Home{% endblock %}</h2></div>
-<div class="centered_cell"><p class="button refresh">Refresh Now</p></div>
+<div class="centered_cell"><p class="button refresh" onclick="update(this)">Refresh Now</p></div>
 {% endblock %}
 
 <!-- Page Content -->
@@ -15,16 +15,16 @@
 <div class="centered_cell" style="margin: 2em 0 2em 0;"><p id="picks" class="button picks"><a href="{{url_for('picks')}}" >$ YOUR PICKS</a></p></div>
 <div class="content">
     {% for game in games %}
-    <div class="game">
-        <div class="team"><p class="team1">{{game["team1"]}}</p><p class="score">{{game["score1"]}}</p></div>
-        <div class="team"><p class="team2">{{game["team2"]}}</p><p class="score">{{game["score2"]}}</p></div>
-        <div class="odds" style="background: linear-gradient(90deg, black {{game['odds1']}}%, blue 10%);">
-            <p>{{game["odds1"]}}</p>
-            <p>{{game["odds2"]}}</p>
+    <div class="game" id="{{game['id']}}">
+        <div class="team"><p class="team1" id="home_team">{{game["home_team"]}}</p><p class="score" id="home_score">{{game["home_score"]}}</p></div>
+        <div class="team"><p class="team2" id="away_team">{{game["away_team"]}}</p><p class="score" id="away_score">{{game["away_score"]}}</p></div>
+        <div class="odds" id="odds" style="background: linear-gradient(90deg, black {{game['home_odds']}}%, blue 10%);">
+            <p id="home_odds">{{game["home_odds"]}}</p>
+            <p id="away_odds">{{game["away_odds"]}}</p>
         </div>
         <div class="buy">
-            <p class="buy1 button">+ BUY @ {{game["odds1"]}}</p>
-            <p class="buy2 button">+ BUY @ {{game["odds2"]}}</p>
+            <p class="buy1 button" id="home_button">+ BUY @ {{game["home_odds"]}}</p>
+            <p class="buy2 button" id="away_button">+ BUY @ {{game["away_odds"]}}</p>
         </div>
     </div>
 
