@@ -31,7 +31,8 @@
     {% endfor %}
 </div>
 
-
-
+{% if login_success %}
+<h2 class="fade" style="position: fixed; left: 43vw; top: 25vh; padding: 2em;">successfully logged in</h2>
+{% endif %}
 
 {% endblock %}

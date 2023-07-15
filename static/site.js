@@ -30,6 +30,7 @@ function update() {
             odds.style.background = `linear-gradient(90deg, black ${game['home_odds']}%, blue 10%)`
 
 		}
+        console.log("successfully updated odds data...")
 	})	
 }
 

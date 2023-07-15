@@ -182,3 +182,40 @@ header h3 {
     font-size: 1.5em;
     font-family:Georgia, 'Times New Roman', Times, serif
 }
+
+
+form {
+    padding: 1em;
+    margin: 1em;
+}
+
+.input {
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px grey;
+    margin-bottom: 1em;
+    padding: 1em;
+    font-size: 21px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error {
+    background-color: ;
+    font-size: 3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: auto;
+    padding: 2em;
+}
+
+
+.fade {
+    opacity: 1;
+    animation: fade 3s linear forwards;
+}
+
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}

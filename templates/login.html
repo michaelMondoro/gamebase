@@ -1,0 +1,33 @@
+<!-- Extend Base Page -->
+{% extends 'base.html' %}
+
+{% block title %}Gamebase{% endblock %}
+
+
+<!-- Custom Page Header -->
+{% block header_items %}
+<div class="centered_cell"><h2>{% block header %}Login{% endblock %}</h2></div>
+<div class="centered_cell"><p class="button refresh" onclick="update(this)">Refresh Now</p></div>
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %} 
+<div class="centered_cell" style="margin: 2em 0 2em 0;">
+    <form action="{{ url_for('handle_login') }}" method="post">
+        <input class="input" type="text" name="username" placeholder="username">
+        <input class="input" type="text" name="password" placeholder="password">
+        <br>
+        <input class="button buy1" type="submit" name="submit" value="login">
+        <input class="button buy2" type="submit" name="submit" value="signup">
+    </form>
+
+</div>
+
+{% if error %}
+    <div class="error">
+        <p>ERROR: invalid login credentials</p>
+    </div>
+
+{% endif %}
+
+{% endblock %}
